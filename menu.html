@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Меню | Кафе Аянт</title>
+  <meta name="description" content="Полное меню кафе Аянт в Манасе. Завтраки, горячие блюда, десерты, кофе и барное меню.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Liquid Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Cascaded Drape Page Transition Overlay -->
+  <div class="transition-panel-container active">
+    <div class="transition-panel"></div>
+    <div class="transition-panel"></div>
+    <div class="transition-panel"></div>
+    <div class="transition-panel"></div>
+    <div class="transition-panel"></div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-float" href="https://wa.me/996553002700" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Написать нам</span>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <a href="index.html" class="logo-container">
+        <div class="logo-icon">A</div>
+        <div class="logo-text">АЯНТ</div>
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" data-translate="nav_home">Главная</a>
+      <a href="menu.html" class="active" data-translate="nav_menu">Меню</a>
+      <a href="about.html" data-translate="nav_about">О нас</a>
+      <a href="gallery.html" data-translate="nav_gallery">Галерея</a>
+      <a href="contacts.html" data-translate="nav_contacts">Контакты</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="kg">KG</button>
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="mobile-nav-toggle"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-nav-menu">
+    <a href="index.html" data-translate="nav_home">Главная</a>
+    <a href="menu.html" class="active" data-translate="nav_menu">Меню</a>
+    <a href="about.html" data-translate="nav_about">О нас</a>
+    <a href="gallery.html" data-translate="nav_gallery">Галерея</a>
+    <a href="contacts.html" data-translate="nav_contacts">Контакты</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="kg">KG</button>
+      <button class="lang-btn active" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Intro -->
+    <section class="page-intro">
+      <div class="drape-decoration">
+        <div class="drape-dec-item"></div><div class="drape-dec-item"></div>
+        <div class="drape-dec-item"></div><div class="drape-dec-item"></div>
+        <div class="drape-dec-item"></div><div class="drape-dec-item"></div>
+        <div class="drape-dec-item"></div><div class="drape-dec-item"></div>
+      </div>
+      <h1 class="page-intro-title fade-in-up" data-translate="menu_title">Наше Меню</h1>
+      <p class="page-intro-desc fade-in-up" data-translate="menu_desc">Блюда, приготовленные с любовью и мастерством наших шеф-поваров</p>
+    </section>
+
+    <!-- Menu Content -->
+    <section style="background-color: var(--color-bg); padding-top: 50px;">
+
+      <!-- Tab Buttons -->
+      <div class="menu-tabs">
+        <button class="menu-tab-btn active" onclick="switchTab('zavtrak', this)">🍳 Завтраки</button>
+        <button class="menu-tab-btn" onclick="switchTab('goryachee', this)">🍽 Горячие блюда</button>
+        <button class="menu-tab-btn" onclick="switchTab('salaty', this)">🥗 Салаты &amp; Супы</button>
+        <button class="menu-tab-btn" onclick="switchTab('pizza', this)">🍕 Пицца &amp; Роллы</button>
+        <button class="menu-tab-btn" onclick="switchTab('deserty', this)">🍰 Десерты &amp; Выпечка</button>
+        <button class="menu-tab-btn" onclick="switchTab('bar', this)">☕ Барное меню</button>
+      </div>
+
+      <!-- ====== ЗАВТРАКИ ====== -->
+      <div id="tab-zavtrak" class="menu-section visible">
+        <div class="menu-time-badge">🕐 с 08:00 до 13:00</div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Не сладкие</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Сытный завтрак</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Кыргызский завтрак</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Завтрак с лососем и картофельным драником</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">400 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Английский завтрак</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">400 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Восточный завтрак</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Шакшука с молодым сыром</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">280 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Каша из гречки с грибами и индейкой</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">330 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Сладкие</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Блины классика с ягодным вареньем и сметаной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">250 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Взбитый творог с гранолой</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">310 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Блины с ягодами и творогом</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Сырники со сладким муссом и бананом</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Кокосовые творожные крокеты с клубникой</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Овсяная каша с чатни из сухофруктов</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">220 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Рисовая каша с ягодным компоте</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">220 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">На хлебе</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Крок мадам с ветчиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Крок мадам с индейкой</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Бенедикт с лососем</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">400 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Бенедикт с ветчиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+        </div>
+      </div>
+
+      <!-- ====== ГОРЯЧИЕ БЛЮДА ====== -->
+      <div id="tab-goryachee" class="menu-section">
+        <div class="menu-time-badge">🕐 с 11:30 до 23:30</div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Горячие блюда</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Куриный шницель с огуречным салатом</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">400 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Куурдак из баранины</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">550 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Куурдак из говядины</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">550 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Цыплёнок гриль с овощами</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">420 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Фрикасе из курицы</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">420 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Бифштекс из говядины</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">440 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Фирменный бургер</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">480 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Медальоны с картофелем и голландским соусом</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">750 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Бефстроганов с пюре</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">550 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Рёбро быка с картофельными драниками</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">600 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Клаб сэндвич с ветчиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">360 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Турецкий кёфте с фри</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">560 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Форель на гриле с брокколи</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">670 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Стейк из сёмги с картофелем в мундире</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">840 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Хоспер Гриль</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Ти-бон</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">1200 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Рибай</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">1200 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Стриплойн</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">1200 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Ковбой</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">1350 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Паста</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Паста альфредо с цыплёнком</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">420 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Паста с лососем</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">450 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Удон с говядиной / креветками</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">450 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Паста болоньезе</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">450 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Сэндвичи</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">С ветчиной и моцареллой</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">250 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">С кониной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">С лососем</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Панини с ветчиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">200 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Панини с кониной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">200 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Гарниры</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Картофель запечёный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">150 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Рис отварной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">120 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Фри</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">160 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Брокколи гриль</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">150 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Овощи гриль</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">150 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Киноа</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">120 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Детское меню</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Пицца с сосисками</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">400 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Котлеты с пюре</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Сосиски с макаронами и брокколи</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+        </div>
+      </div>
+
+      <!-- ====== САЛАТЫ & СУПЫ ====== -->
+      <div id="tab-salaty" class="menu-section">
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Салаты</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Хумус со свежими овощами</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">280 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Деревенский салат с сыром</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Салат с хрустящими баклажанами</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">320 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Цезарь с креветками</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">460 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Салат с лососем и картофелем</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">400 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Салат с тунцом и хумусом</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">320 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Цезарь с хрустящим цыплёнком</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">440 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Салат с телятиной и миндалём</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">460 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Боул салат с креветками</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">430 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Боул салат с курицей</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">360 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Салат с бурратой</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">460 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Фунчоза с телятиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">340 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Фруктовая нарезка</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">600 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Супы</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Суп том ям с морепродуктами</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">480 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Чечевичный суп с кониной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">260 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Шорпо из говядины</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">380 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Шорпо из баранины</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">380 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Борщ из говядины</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Окрошка с ветчиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">240 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Рамен с говядиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">340 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Рамен с курицей и сыром</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">340 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Рамен сливочный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">340 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Хлеб</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Чесночный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">100 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Сырно-чесночный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">100 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Хлебная корзина</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">150 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Лепёшка</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">60 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Соусы</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">BBQ / Перечный / Ромеско</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">80 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Томатный / Масляный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">80 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Кетчуп / Сырный / Чесночный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">60 сом</span></div>
+        </div>
+      </div>
+
+      <!-- ====== ПИЦЦА & РОЛЛЫ ====== -->
+      <div id="tab-pizza" class="menu-section">
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Пицца</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">С курицей и овощами</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">420 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Маргарита</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">400 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Пепперони</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">450 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">С кониной и соусом BBQ</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">550 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Болоньезе</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">450 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">С ветчиной и грибами</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">550 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">С лососем</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">550 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Роллы</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Филадельфия</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">370 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Калифорния</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Канада</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">400 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Ролл с курицей</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Ролл Бонито</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Запечёный с лососем</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">370 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Запечёный с курицей</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">330 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Запечёный с крабом</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">330 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Запечёный с угрем</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Темпура с креветками</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">330 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Калифорния темпура</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Темпура угрь</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Филадельфия темпура</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">370 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Темпура курица</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">330 сом</span></div>
+        </div>
+      </div>
+
+      <!-- ====== ДЕСЕРТЫ & ВЫПЕЧКА ====== -->
+      <div id="tab-deserty" class="menu-section">
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Торты</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Тирамису</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">330 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Баскский чизкейк</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">380 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Медовик</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Наполеон</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Вупи пай</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">380 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Фисташково-малиновый рулет</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Черничный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">380 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Тарталетки</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Шоколадная</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">250 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Бонофfi</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">250 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Мусс из белого шоколада с ананасом</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">250 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Мусс из молочного шоколада с малиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">250 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Выпечка</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Круассан с лососем</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">300 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Круассан с ветчиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">250 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Круассан классический</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">160 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Круассан фисташковый</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">250 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Круассан с малиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">250 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Пан шоколя</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">160 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Улитка с изюмом</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">120 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Эклеры</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Шоколадный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">230 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Ванильный с малиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">230 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Фисташковый</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">230 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Корпусные пирожные</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Голубика</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Манго</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">350 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Кексы с начинкой</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Мраморный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">430 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Лимонный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">430 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Фисташковый с малиной</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">430 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Синнабон</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">150 сом</span></div>
+        </div>
+
+        <div class="menu-sub-category">
+          <div class="menu-sub-title">Кейк попсы</div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Белый</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">120 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Чёрный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">120 сом</span></div>
+          <div class="menu-item-row"><span class="menu-item-row-name">Мороженое в ассортименте</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">220 сом</span></div>
+        </div>
+      </div>
+
+      <!-- ====== БАРНОЕ МЕНЮ ====== -->
+      <div id="tab-bar" class="menu-section">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+          <div>
+            <div class="menu-sub-category">
+              <div class="menu-sub-title">Кофе</div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Эспрессо</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">120 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Американо</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">150 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Капучино</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">180 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Латте</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">200 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Флэт Уайт</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">220 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Раф</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">220 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Горячий шоколад</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">230 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Какао</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">230 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Матча</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">230 сом</span></div>
+            </div>
+
+            <div class="menu-sub-category">
+              <div class="menu-sub-title">Холодный кофе</div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Айс латте</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">220 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Айс матча</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">230 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Айс бамбл кофе</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">250 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Айс американо</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">160 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Тоник эспрессо</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">230 сом</span></div>
+            </div>
+
+            <div class="menu-sub-category">
+              <div class="menu-sub-title">Чай</div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Чёрный / Зелёный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">60 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Ташкентский</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">240 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Мятный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">170 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Ягодный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">260 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Облепиховый</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">260 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Имбирный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">260 сом</span></div>
+            </div>
+
+            <div class="menu-sub-category">
+              <div class="menu-sub-title">Смузи</div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Клубничный / Тропика / Экзотика</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">200 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Витаминка / Ягодный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">200 сом</span></div>
+            </div>
+
+            <div class="menu-sub-category">
+              <div class="menu-sub-title">Милкшейки</div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Орео / Банановый / Клубничный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">210 сом</span></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="menu-sub-category">
+              <div class="menu-sub-title">Айсти <span style="font-size:12px;color:var(--color-text-muted);">0,5/0,7</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Клубника - Апельсин</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">260/290</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">4 сезона</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">240/260</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Зелёный чай с киви</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">210/240</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Клубника - Киви</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">260/290</span></div>
+            </div>
+
+            <div class="menu-sub-category">
+              <div class="menu-sub-title">Лимонад <span style="font-size:12px;color:var(--color-text-muted);">0,3/1,0</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Манго - маракуйя</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">200/350</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Киви - яблоко</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">210/360</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Мохито классический</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">200/350</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Мохито клубничный</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">200/350</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Ягодный лимонад</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">200/350</span></div>
+            </div>
+
+            <div class="menu-sub-category">
+              <div class="menu-sub-title">Бабл-ти <span style="font-size:12px;color:var(--color-text-muted);">0,5/0,7</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Орео / Шоко-банан</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">260/300</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Клубника в Шапке</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">260/280</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Воздушный виноград</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">240/260</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Рэд Драгон / Ананас-маракуйя</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">260/300 / 260/290</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Матча / Матча-манго</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">260/280 / 240/260</span></div>
+            </div>
+
+            <div class="menu-sub-category">
+              <div class="menu-sub-title">Напитки</div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Кола / Фанта / Спрайт (0,4/1,0)</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">120/140</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Соки</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">250 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Тоник</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">120 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Аралаш / Максым / Чалап</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">170 сом</span></div>
+              <div class="menu-item-row"><span class="menu-item-row-name">Жалал-Абад 27</span><span class="menu-item-row-dots"></span><span class="menu-item-row-price">80 сом</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-info-col">
+        <div class="footer-logo">АЯНТ</div>
+        <p class="footer-desc" data-translate="footer_desc_val">
+          Премиальное кафе-ресторан в городе Манас. Современный интерьер, изысканный вкус и теплое гостеприимство.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-title" data-translate="footer_links_title">Навигация</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" data-translate="nav_home">Главная</a></li>
+          <li><a href="menu.html" data-translate="nav_menu">Меню</a></li>
+          <li><a href="about.html" data-translate="nav_about">О нас</a></li>
+          <li><a href="gallery.html" data-translate="nav_gallery">Галерея</a></li>
+          <li><a href="contacts.html" data-translate="nav_contacts">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title" data-translate="footer_contact_title">Контакты</h4>
+        <div class="footer-contact-item">
+          <span>Телефон</span>
+          <span>+996 553 002 700</span>
+        </div>
+        <div class="footer-contact-item">
+          <span>Адрес</span>
+          <span>пр. Тумонбая Байзакова, 178/4 (ориентир — Новая Мэрия)</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-title">Часы работы</h4>
+        <div class="footer-contact-item">
+          <span>Ежедневно: 08:00 – 00:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Cafe Ayant. <span data-translate="footer_all_rights">Все права защищены.</span></div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    function switchTab(tabId, btn) {
+      // Hide all sections
+      document.querySelectorAll('.menu-section').forEach(s => s.classList.remove('visible'));
+      // Remove active from all buttons
+      document.querySelectorAll('.menu-tab-btn').forEach(b => b.classList.remove('active'));
+      // Show selected
+      document.getElementById('tab-' + tabId).classList.add('visible');
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
